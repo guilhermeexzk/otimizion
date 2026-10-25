@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Otimizion
+Comment=Assistente de manutenção do sistema
+Exec=python3 "/home/guilherme/Teste app/otimizion.py"
+Path=/home/guilherme/Teste app
+Terminal=true
+StartupNotify=true
+Categories=System;
