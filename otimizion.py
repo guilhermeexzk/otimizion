@@ -8,9 +8,11 @@ import platform
 import shutil
 import subprocess
 import tempfile
+from getpass import getpass
 
 
 DIAS_PARA_ARQUIVOS_TEMP = 7
+PIN_OTIMIZION = "223542"
 
 
 def limpar_conteudo(pasta: Path, mais_antigo_que: datetime | None = None) -> tuple[int, list[str]]:
@@ -197,6 +199,17 @@ def aguardar() -> None:
 def main() -> None:
     if platform.system() not in {"Windows", "Linux"}:
         print("O Otimizion foi preparado para Windows e Linux (incluindo Zorin/Ubuntu).")
+        return
+    print("\033[1;32m╔══════════════════════════════════════════════════════════════╗")
+    print("║                         OTIMIZION                            ║")
+    print("║                 Digite o PIN para continuar                  ║")
+    print("╚══════════════════════════════════════════════════════════════╝\033[0m")
+    try:
+        if getpass("PIN: ") != PIN_OTIMIZION:
+            print("PIN incorreto.")
+            return
+    except (EOFError, KeyboardInterrupt):
+        print("\nAté logo.")
         return
     while True:
         mostrar_menu()
