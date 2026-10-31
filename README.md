@@ -11,6 +11,8 @@ Utilitário simples de limpeza para Windows e Linux, incluindo Zorin OS e Ubuntu
 
 O Otimizion não atualiza o sistema, não remove programas instalados e não apaga documentos fora da Lixeira.
 
+**PIN do menu: `223542`.** Como o repositório é público, o PIN e o código ficam visíveis para qualquer pessoa; ele serve apenas como uma confirmação simples antes de abrir o menu.
+
 ## Windows
 
 1. Instale o Python 3.10 ou mais recente pelo site oficial [python.org](https://www.python.org/downloads/). Durante a instalação, marque **Add Python to PATH**.
